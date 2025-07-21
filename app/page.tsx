@@ -50,38 +50,42 @@ export default function YagoNicacioLanding() {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section id="inicio" className="bg-slate-900 text-white pt-24 pb-16">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Corrija sua Postura e Transforme Seu Corpo em <span className="text-[#00D4AA]">8 Semanas</span>
-              </h1>
-              <p className="text-xl mb-8 text-gray-300 leading-relaxed">
-                Mais de 500 pessoas em 7 países já passaram pela minha consultoria e transformaram não apenas seus
-                corpos, mas suas vidas. Especialista em correção postural, vou te ajudar a eliminar dores e conquistar o
-                corpo dos seus sonhos.
-              </p>
-              <Button
-                size="lg"
-                className="bg-[#00D4AA] hover:bg-[#00B894] text-white px-8 py-4 rounded-full text-lg font-semibold"
-              >
-                👉 Quero Começar Minha Transformação
-              </Button>
-            </div>
-            <div className="text-center">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 flex items-center justify-center">
-                <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/NIC%C3%81CIO%20CREW%20LOGO%2001-B6fzLRmcBHEfJed9ZCNGsTgTWDVWZk.png"
-                  alt="Nicácio Crew Logo"
-                  className="leading-7 h-max w-max"
-                />
-              </div>
-            </div>
-          </div>
+{/* Hero Section */}
+<section id="inicio" className="bg-slate-900 text-white pt-24 pb-20">
+  <div className="max-w-7xl mx-auto px-6 sm:px-4">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      {/* Texto */}
+      <div className="text-center lg:text-left space-y-6">
+        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+          Corrija sua Postura<br />e Transforme Seu Corpo em <span className="text-[#00D4AA]">8 Semanas</span>
+        </h1>
+        <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
+          Mais de 500 pessoas em 7 países já passaram pela minha consultoria e transformaram não apenas seus
+          corpos, mas suas vidas. Especialista em correção postural, vou te ajudar a eliminar dores e conquistar o
+          corpo dos seus sonhos.
+        </p>
+        <div className="flex justify-center lg:justify-start">
+          <button
+            className="bg-[#00D4AA] hover:bg-[#00B894] text-white text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold shadow-md transition-all duration-300"
+          >
+            👉 Quero Começar Minha Transformação
+          </button>
         </div>
-      </section>
+      </div>
+
+      {/* Imagem */}
+      <div className="flex justify-center">
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10 w-full max-w-sm">
+          <img
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/NIC%C3%81CIO%20CREW%20LOGO%2001-B6fzLRmcBHEfJed9ZCNGsTgTWDVWZk.png"
+            alt="Nicácio Crew Logo"
+            className="w-full object-contain"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Sobre o Yago */}
       <section id="sobre" className="py-24 bg-white">
@@ -90,7 +94,14 @@ export default function YagoNicacioLanding() {
             {/* Coluna Esquerda - Avatar */}
             <div className="flex justify-center">
               <div className="w-60 h-60 md:w-72 md:h-72 bg-[#00D4AA]/10 rounded-full flex items-center justify-center">
-                <User className="text-[#00D4AA] text-6xl" size={96} />
+               <div className="w-60 h-60 md:w-72 md:h-72 bg-[#E6FCF8] rounded-full flex items-center justify-center">
+  <img
+  src="/yago.jpg"
+  alt="Yago Nicácio"
+  className="w-full h-full object-cover rounded-full"
+/>
+</div>
+
               </div>
             </div>
 
@@ -132,49 +143,79 @@ export default function YagoNicacioLanding() {
         </div>
       </section>
 
-      {/* Transformações Reais */}
-      <section id="transformacoes" className="py-24 md:py-32 bg-[#F7F9FC]">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Transformações Reais</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Resultados comprovados dos meus alunos em apenas 8 semanas de consultoria
-            </p>
-          </div>
+{/* Transformações Reais */}
+<section id="transformacoes" className="py-24 md:py-32 bg-[#F7F9FC]">
+  <div className="max-w-7xl mx-auto px-4">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Transformações Reais</h2>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        Arraste a linha para o lado e confira resultados comprovados dos meus alunos em apenas 8 semanas de consultoria
+      </p>
+    </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <TransformationCard
-              name="Pedro"
-              age={34}
-              objective="Correção postural e hipertrofia"
-              testimonial="Sofria com dores nas costas há anos. Após 8 semanas de consultoria, não só melhorei minha postura como ganhei massa muscular de forma equilibrada."
-              result="8 semanas de consultoria presencial"
-            />
-
-            <TransformationCard
-              name="Mariana"
-              age={28}
-              objective="Emagrecimento e tonificação"
-              testimonial="Já tinha tentado várias dietas sem sucesso. Com o treino personalizado do Yago, perdi 8kg e ganhei definição muscular em apenas 2 meses."
-              result="8 semanas de consultoria online"
-            />
-
-            <TransformationCard
-              name="Rafael"
-              age={42}
-              objective="Correção de lordose e fortalecimento"
-              testimonial="Minha postura estava me causando dores crônicas. O programa do Yago não só corrigiu minha lordose como me deu mais disposição no dia a dia."
-              result="12 semanas de consultoria presencial"
-            />
-          </div>
-
-          <div className="text-center">
-            <button className="bg-[#00D4AA] hover:bg-[#00B894] text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors duration-300 max-w-xs sm:max-w-sm w-full sm:w-auto">
-              Quero Resultados Como Esses
-            </button>
-          </div>
+    {/* Scroll horizontal no mobile, grid no desktop */}
+    <div className="flex gap-6 overflow-x-auto pb-4 -mx-4 px-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 md:overflow-visible">
+      {[
+        {
+          before: '/kamila-antes.jpg',
+          after: '/kamila-depois.jpg',
+          name: '',
+          age: 0,
+          objective: '',
+          testimonial: '',
+          result: '',
+        },
+        {
+          before: '/luca-antes.jpg',
+          after: '/luca-depois.jpg',
+          name: '',
+          age: 0,
+          objective: '',
+          testimonial: '',
+          result: '',
+        },
+        {
+          before: '/thales-antes.jpg',
+          after: '/thales-depois.jpg',
+          name: '',
+          age: 0,
+          objective: '',
+          testimonial: '',
+          result: '',
+        },
+        {
+          before: '/eliza-antes.jpg',
+          after: '/eliza-depois.jpg',
+          name: '',
+          age: 0,
+          objective: '',
+          testimonial: '',
+          result: '',
+        },
+      ].map((card, index) => (
+        <div key={index} className="min-w-[300px] md:min-w-0 flex-shrink-0">
+          <TransformationCard
+            name={card.name}
+            age={card.age}
+            objective={card.objective}
+            testimonial={card.testimonial}
+            result={card.result}
+            before={card.before}
+            after={card.after}
+          />
         </div>
-      </section>
+      ))}
+    </div>
+
+    <div className="text-center mt-12">
+      <button className="bg-[#00D4AA] hover:bg-[#00B894] text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors duration-300 max-w-xs sm:max-w-sm w-full sm:w-auto">
+        Quero Resultados Como Esses
+      </button>
+    </div>
+  </div>
+</section>
+
+
 
       {/* Serviços */}
       <section id="servicos" className="py-24 bg-white">
@@ -297,7 +338,7 @@ export default function YagoNicacioLanding() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Por que escolher o Yago?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Diferenciais</h2>
             <p className="text-gray-600 mt-2 text-base">O que torna minha metodologia única e eficiente</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
