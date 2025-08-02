@@ -21,7 +21,6 @@ import {
   Quote,
 } from "lucide-react"
 import Link from "next/link"
-import { TransformationCard } from "@/components/transformation-card"
 
 export default function YagoNicacioLanding() {
   return (
