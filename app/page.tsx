@@ -65,11 +65,12 @@ export default function YagoNicacioLanding() {
           corpo dos seus sonhos.
         </p>
         <div className="flex justify-center lg:justify-start">
-          <button
+          <a
+            href="#servicos"
             className="bg-[#00D4AA] hover:bg-[#00B894] text-white text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold shadow-md transition-all duration-300"
           >
             👉 Quero Começar Minha Transformação
-          </button>
+          </a>
         </div>
       </div>
 
@@ -217,122 +218,126 @@ export default function YagoNicacioLanding() {
 
 
 
-      {/* Serviços */}
-      <section id="servicos" className="py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-4 md:px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Serviços</h2>
-            <p className="text-gray-600 mt-2">Escolha a modalidade que melhor se adapta ao seu estilo de vida</p>
+{/* Serviços */}
+<section id="servicos" className="py-24 bg-white">
+  <div className="max-w-6xl mx-auto px-4 md:px-6">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Serviços</h2>
+      <p className="text-gray-600 mt-2">Escolha a modalidade que melhor se adapta ao seu estilo de vida</p>
+    </div>
+
+    <div className="grid md:grid-cols-2 gap-6 mt-12 items-stretch">
+      {/* Consultoria Presencial */}
+      <div className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden flex flex-col h-full">
+        <div className="bg-[#00D4AA] text-white px-6 py-4">
+          <h3 className="text-xl font-bold">Consultoria Presencial</h3>
+        </div>
+        <div className="px-6 py-2">
+          <p className="text-[#00D4AA] font-semibold text-lg">Treino ao Seu Lado</p>
+        </div>
+        <div className="px-6 pb-6 flex flex-col flex-grow">
+          <div className="flex-grow">
+            <div className="space-y-4 mb-6">
+              <p className="text-gray-700 leading-relaxed">
+                Se você busca um acompanhamento técnico de perto, essa é a sua escolha. Em um único encontro,
+                analisamos sua postura, medimos sua composição corporal, corrigimos padrões de movimento e
+                montamos seu treino de 8 semanas na hora, junto com você.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                E o melhor: executo o treino com você na academia, corrigindo cada detalhe para garantir resultado
+                e segurança.
+              </p>
+            </div>
+
+            <ul className="space-y-3">
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-5 h-5 text-[#00D4AA] mt-0.5 flex-shrink-0" />
+                <span className="text-gray-700">Avaliação postural e funcional completa</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-5 h-5 text-[#00D4AA] mt-0.5 flex-shrink-0" />
+                <span className="text-gray-700">Treino montado e executado junto com você</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-5 h-5 text-[#00D4AA] mt-0.5 flex-shrink-0" />
+                <span className="text-gray-700">Aplicativo com vídeos de todos os exercícios</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-5 h-5 text-[#00D4AA] mt-0.5 flex-shrink-0" />
+                <span className="text-gray-700">Feedback semanal + reavaliação após 30 dias</span>
+              </li>
+            </ul>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 mt-12 items-stretch">
-            {/* Consultoria Presencial */}
-            <div className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden flex flex-col h-full">
-              <div className="bg-[#00D4AA] text-white px-6 py-4">
-                <h3 className="text-xl font-bold">Consultoria Presencial</h3>
-              </div>
-              <div className="px-6 py-2">
-                <p className="text-[#00D4AA] font-semibold text-lg">Treino ao Seu Lado</p>
-              </div>
-              <div className="px-6 pb-6 flex flex-col flex-grow">
-                <div className="flex-grow">
-                  <div className="space-y-4 mb-6">
-                    <p className="text-gray-700 leading-relaxed">
-                      Se você busca um acompanhamento técnico de perto, essa é a sua escolha. Em um único encontro,
-                      analisamos sua postura, medimos sua composição corporal, corrigimos padrões de movimento e
-                      montamos seu treino de 8 semanas na hora, junto com você.
-                    </p>
-                    <p className="text-gray-700 leading-relaxed">
-                      E o melhor: executo o treino com você na academia, corrigindo cada detalhe para garantir resultado
-                      e segurança.
-                    </p>
-                  </div>
-
-                  <ul className="space-y-3">
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-[#00D4AA] mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700">Avaliação postural e funcional completa</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-[#00D4AA] mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700">Treino montado e executado junto com você</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-[#00D4AA] mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700">Aplicativo com vídeos de todos os exercícios</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-[#00D4AA] mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700">Feedback semanal + reavaliação após 30 dias</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="flex justify-center mt-6">
-                  <button
-                    type="button"
-                    className="bg-[#00D4AA] hover:bg-[#00B894] text-white py-3 px-6 rounded shadow transition-colors font-bold leading-7"
-                  >
-                    Quero Começar Agora
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {/* Consultoria Online */}
-            <div className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden flex flex-col h-full">
-              <div className="bg-[#00D4AA] text-white px-6 py-4">
-                <h3 className="text-xl font-bold">Consultoria Online</h3>
-              </div>
-              <div className="px-6 py-2">
-                <p className="text-[#00D4AA] font-semibold text-lg">Praticidade com Resultados Reais</p>
-              </div>
-              <div className="px-6 pb-6 flex flex-col flex-grow">
-                <div className="flex-grow">
-                  <div className="space-y-4 mb-6">
-                    <p className="text-gray-700 leading-relaxed">
-                      Mesmo à distância, você terá um acompanhamento técnico de verdade. Com base em fotos e anamnese
-                      detalhada, montamos um plano de 8 semanas totalmente ajustado ao seu corpo e rotina.
-                    </p>
-                    <p className="text-gray-700 leading-relaxed">
-                      Você recebe tudo em um app com vídeos de execução, envia vídeos da sua última série e recebe
-                      correções personalizadas toda semana.
-                    </p>
-                  </div>
-
-                  <ul className="space-y-3">
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-[#00D4AA] mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700">Avaliação postural online por fotos</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-[#00D4AA] mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700">Treino de 8 semanas com vídeos explicativos</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-[#00D4AA] mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700">Feedback semanal e ajustes sob demanda</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-[#00D4AA] mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700">Avaliação mensal para acompanhar sua evolução</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="flex justify-center mb-0 mt-6">
-                  <button
-                    type="button"
-                    className="bg-[#00D4AA] hover:bg-[#00B894] text-white rounded shadow transition-colors font-bold px-6 py-3 mx-0"
-                  >
-                    Quero Começar Agora
-                  </button>
-                </div>
-              </div>
-            </div>
+          <div className="flex justify-center mt-6">
+            <a
+              href="https://wa.me/5524998693677"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#00D4AA] hover:bg-[#00B894] text-white py-3 px-6 rounded shadow transition-colors font-bold leading-7"
+            >
+              Quero Começar Agora
+            </a>
           </div>
         </div>
-      </section>
+      </div>
+
+      {/* Consultoria Online */}
+      <div className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden flex flex-col h-full">
+        <div className="bg-[#00D4AA] text-white px-6 py-4">
+          <h3 className="text-xl font-bold">Consultoria Online</h3>
+        </div>
+        <div className="px-6 py-2">
+          <p className="text-[#00D4AA] font-semibold text-lg">Praticidade com Resultados Reais</p>
+        </div>
+        <div className="px-6 pb-6 flex flex-col flex-grow">
+          <div className="flex-grow">
+            <div className="space-y-4 mb-6">
+              <p className="text-gray-700 leading-relaxed">
+                Mesmo à distância, você terá um acompanhamento técnico de verdade. Com base em fotos e anamnese
+                detalhada, montamos um plano de 8 semanas totalmente ajustado ao seu corpo e rotina.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                Você recebe tudo em um app com vídeos de execução, envia vídeos da sua última série e recebe
+                correções personalizadas toda semana.
+              </p>
+            </div>
+
+            <ul className="space-y-3">
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-5 h-5 text-[#00D4AA] mt-0.5 flex-shrink-0" />
+                <span className="text-gray-700">Avaliação postural online por fotos</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-5 h-5 text-[#00D4AA] mt-0.5 flex-shrink-0" />
+                <span className="text-gray-700">Treino de 8 semanas com vídeos explicativos</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-5 h-5 text-[#00D4AA] mt-0.5 flex-shrink-0" />
+                <span className="text-gray-700">Feedback semanal e ajustes sob demanda</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-5 h-5 text-[#00D4AA] mt-0.5 flex-shrink-0" />
+                <span className="text-gray-700">Avaliação mensal para acompanhar sua evolução</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="flex justify-center mt-6">
+            <a
+              href="https://wa.me/5524998693677"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#00D4AA] hover:bg-[#00B894] text-white py-3 px-6 rounded shadow transition-colors font-bold leading-7"
+            >
+              Quero Começar Agora
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Diferenciais */}
       <section className="py-16 bg-gray-50">
