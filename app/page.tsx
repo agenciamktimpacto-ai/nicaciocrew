@@ -242,7 +242,7 @@ export default function YagoNicacioLanding() {
           <div className="flex-grow">
             <div className="space-y-4 mb-6">
               <p className="text-gray-700 leading-relaxed">
-                Se você busca um acompanhamento técnico de perto, essa é a sua escolha. Em um único encontro,
+                Se você busca um acompanhamento técnico de perto, essa é a sua escolha. Em uma avaliação no meu consultório,
                 analisamos sua postura, medimos sua composição corporal, corrigimos padrões de movimento e
                 montamos seu treino de 8 semanas na hora, junto com você.
               </p>
@@ -504,62 +504,17 @@ export default function YagoNicacioLanding() {
   </div>
 </section>
 
-{/* Formulário de Contato */}
-<section id="contato" className="py-16 bg-[#00D4AA]">
-  <div className="container mx-auto px-4">
-    <div className="max-w-2xl mx-auto">
-      <div className="text-center mb-8">
-        <h2 className="text-4xl font-bold mb-4 text-white">Entre em contato</h2>
-        <p className="text-xl text-teal-100">Vamos começar sua transformação hoje mesmo</p>
-      </div>
-      <Card className="bg-white">
-        <CardContent className="p-8">
-         <form
-  className="space-y-6"
-  onSubmit={(e) => {
-    e.preventDefault();
-    const texto = `
-📋 *Nova Avaliação Recebida*
-
-👤 *Nome:* ${e.target.nome.value}
-📞 *Telefone:* ${e.target.telefone.value}
-📧 *Email:* ${e.target.email.value}
-🛠 *Serviço de interesse:* ${e.target.servico.value}
-📝 *Mensagem:* ${e.target.mensagem.value}
-    `;
-    const url = `https://wa.me/5524998693677?text=${encodeURIComponent(texto)}`;
-    window.open(url, "_blank");
-  }}
->
-  <Input name="nome" placeholder="Seu nome completo" className="rounded-lg" required />
-  <Input name="telefone" placeholder="(99) 99999-9999" className="rounded-lg" required />
-  <Input name="email" type="email" placeholder="seu@email.com" className="rounded-lg" required />
-  <select name="servico" className="rounded-lg w-full px-4 py-3 border border-gray-300" required>
-    <option value="">Selecione o serviço</option>
-    <option value="Consultoria Presencial">Consultoria Presencial</option>
-    <option value="Consultoria Online">Consultoria Online</option>
-    <option value="Ambos">Quero saber mais sobre ambos</option>
-  </select>
-  <Textarea name="mensagem" className="rounded-lg min-h-[120px]" />
-  <Button type="submit" className="...">📲 Quero Fazer Minha Avaliação</Button>
-</form>
-
-        </CardContent>
-      </Card>
+{/* Footer */}
+<footer className="bg-white text-gray-900 py-8 border-t border-gray-200">
+  <div className="container mx-auto px-4 text-center">
+    <div className="text-2xl font-bold text-[#00D4AA] mb-4">Yago Nicácio</div>
+    <p className="text-gray-600 mb-4">Personal Trainer - Especialista em Correção Postural</p>
+    <div className="flex justify-center space-x-6 text-gray-500 text-sm">
+      <span>© 2025 Yago Nicácio. Todos os direitos reservados.</span>
     </div>
   </div>
-</section>
+</footer>
 
-      {/* Footer */}
-      <footer className="bg-slate-900 text-white py-8">
-        <div className="container mx-auto px-4 text-center">
-          <div className="text-2xl font-bold text-[#00D4AA] mb-4">Yago Nicácio</div>
-          <p className="text-gray-400 mb-4">Personal Trainer - Especialista em Correção Postural</p>
-          <div className="flex justify-center space-x-6 text-gray-400">
-            <span>© 2025 Yago Nicácio. Todos os direitos reservados.</span>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }
