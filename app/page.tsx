@@ -1,3 +1,6 @@
+'use client';
+
+import { useState } from "react";
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -476,81 +479,105 @@ export default function YagoNicacioLanding() {
         </div>
       </section>
 
-      {/* Chamada Final */}
-      <section className="py-16 bg-slate-900 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-6">
-            Sua Dor Não É Normal.
-            <br />
-            Sua Postura Pode Ser Corrigida.
-          </h2>
-          <p className="text-white text-center text-base md:text-lg mt-4 max-w-2xl mx-auto">
-            Se você sente que está travado, sem evoluir ou sempre com alguma dor, o problema não é falta de treino – é
-            falta de diagnóstico.
-          </p>
-          <p className="text-white text-center text-base md:text-lg mt-4 max-w-2xl mx-auto mb-8">
-            Entre agora para minha consultoria e comece a treinar com técnica, clareza e resultado.
-          </p>
-          <Button size="lg" className="bg-[#00D4AA] hover:bg-[#00B894] text-white px-8 py-4 rounded-full text-lg">
-            Quero Começar Minha Transformação
-          </Button>
-        </div>
-      </section>
+{/* Chamada Final */}
+<section className="py-16 bg-slate-900 text-white">
+  <div className="container mx-auto px-4 text-center">
+    <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-6">
+      Sua Dor Não É Normal.
+      <br />
+      Sua Postura Pode Ser Corrigida.
+    </h2>
+    <p className="text-white text-center text-base md:text-lg mt-4 max-w-2xl mx-auto">
+      Se você sente que está travado, sem evoluir ou sempre com alguma dor, o problema não é falta de treino – é
+      falta de diagnóstico.
+    </p>
+    <p className="text-white text-center text-base md:text-lg mt-4 max-w-2xl mx-auto mb-8">
+      Entre agora para minha consultoria e comece a treinar com técnica, clareza e resultado.
+    </p>
+    <Button
+      size="lg"
+      className="bg-[#00D4AA] hover:bg-[#00B894] text-white px-8 py-4 rounded-full text-lg"
+      onClick={() => document.getElementById("contato")?.scrollIntoView({ behavior: "smooth" })}
+    >
+      Quero Começar Minha Transformação
+    </Button>
+  </div>
+</section>
 
-      {/* Formulário de Contato */}
-      <section id="contato" className="py-16 bg-[#00D4AA]">
-        <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto">
-            <div className="text-center mb-8">
-              <h2 className="text-4xl font-bold mb-4 text-white">Entre em contato</h2>
-              <p className="text-xl text-teal-100">Vamos começar sua transformação hoje mesmo</p>
+{/* Formulário de Contato */}
+<section id="contato" className="py-16 bg-[#00D4AA]">
+  <div className="container mx-auto px-4">
+    <div className="max-w-2xl mx-auto">
+      <div className="text-center mb-8">
+        <h2 className="text-4xl font-bold mb-4 text-white">Entre em contato</h2>
+        <p className="text-xl text-teal-100">Vamos começar sua transformação hoje mesmo</p>
+      </div>
+      <Card className="bg-white">
+        <CardContent className="p-8">
+          <form
+            className="space-y-6"
+            onSubmit={(e) => {
+              e.preventDefault();
+              const texto = `
+📋 *Nova Avaliação Recebida*
+
+👤 *Nome:* ${e.target.nome.value}
+📞 *Telefone:* ${e.target.telefone.value}
+📧 *Email:* ${e.target.email.value}
+🛠 *Serviço de interesse:* ${e.target.servico.value}
+📝 *Mensagem:* ${e.target.mensagem.value}
+              `;
+              const url = `https://wa.me/5524998693677?text=${encodeURIComponent(texto)}`;
+              window.open(url, "_blank");
+            }}
+          >
+            <div className="grid md:grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Nome</label>
+                <Input name="nome" placeholder="Seu nome completo" className="rounded-lg" required />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Telefone</label>
+                <Input name="telefone" placeholder="(99) 99999-9999" className="rounded-lg" required />
+              </div>
             </div>
-            <Card className="bg-white">
-              <CardContent className="p-8">
-                <form className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Nome</label>
-                      <Input placeholder="Seu nome completo" className="rounded-lg" />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Telefone</label>
-                      <Input placeholder="(99) 99999-9999" className="rounded-lg" />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">E-mail</label>
-                    <Input type="email" placeholder="seu@email.com" className="rounded-lg" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Serviço de interesse</label>
-                    <Select>
-                      <SelectTrigger className="rounded-lg">
-                        <SelectValue placeholder="Selecione o serviço" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="presencial">Consultoria Presencial</SelectItem>
-                        <SelectItem value="online">Consultoria Online</SelectItem>
-                        <SelectItem value="ambos">Quero saber mais sobre ambos</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Mensagem</label>
-                    <Textarea
-                      placeholder="Conte-me sobre seus objetivos e principais dificuldades..."
-                      className="rounded-lg min-h-[120px]"
-                    />
-                  </div>
-                  <Button className="w-full bg-[#00D4AA] hover:bg-[#00B894] text-white py-4 rounded-full text-lg font-semibold">
-                    📲 Quero Fazer Minha Avaliação
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">E-mail</label>
+              <Input name="email" type="email" placeholder="seu@email.com" className="rounded-lg" required />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Serviço de interesse</label>
+              <select
+                name="servico"
+                className="rounded-lg w-full px-4 py-3 border border-gray-300"
+                required
+              >
+                <option value="">Selecione o serviço</option>
+                <option value="Consultoria Presencial">Consultoria Presencial</option>
+                <option value="Consultoria Online">Consultoria Online</option>
+                <option value="Ambos">Quero saber mais sobre ambos</option>
+              </select>
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Mensagem</label>
+              <Textarea
+                name="mensagem"
+                placeholder="Conte-me sobre seus objetivos e principais dificuldades..."
+                className="rounded-lg min-h-[120px]"
+              />
+            </div>
+            <Button
+              type="submit"
+              className="w-full bg-[#00D4AA] hover:bg-[#00B894] text-white py-4 rounded-full text-lg font-semibold"
+            >
+              📲 Quero Fazer Minha Avaliação
+            </Button>
+          </form>
+        </CardContent>
+      </Card>
+    </div>
+  </div>
+</section>
 
       {/* Footer */}
       <footer className="bg-slate-900 text-white py-8">
