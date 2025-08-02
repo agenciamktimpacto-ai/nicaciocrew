@@ -149,75 +149,46 @@ export default function YagoNicacioLanding() {
 
 {/* Transformações Reais */}
 <section id="transformacoes" className="py-24 md:py-32 bg-[#F7F9FC]">
-  <div className="max-w-7xl mx-auto px-4">
+  <div className="max-w-4xl mx-auto px-4">
     <div className="text-center mb-16">
       <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Transformações Reais</h2>
       <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-        Arraste a linha para o lado e confira resultados comprovados dos meus alunos em apenas 8 semanas de consultoria
+        Confira resultados comprovados dos meus alunos em apenas 8 semanas de consultoria
       </p>
     </div>
 
-    {/* Scroll horizontal no mobile, grid no desktop */}
-    <div className="flex gap-6 overflow-x-auto pb-4 -mx-4 px-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 md:overflow-visible">
+    <div className="space-y-12">
       {[
-        {
-          before: '/kamila-antes.jpg',
-          after: '/kamila-depois.jpg',
-          name: '',
-          age: 0,
-          objective: '',
-          testimonial: '',
-          result: '',
-        },
-        {
-          before: '/luca-antes.jpg',
-          after: '/luca-depois.jpg',
-          name: '',
-          age: 0,
-          objective: '',
-          testimonial: '',
-          result: '',
-        },
-        {
-          before: '/thales-antes.jpg',
-          after: '/thales-depois.jpg',
-          name: '',
-          age: 0,
-          objective: '',
-          testimonial: '',
-          result: '',
-        },
-        {
-          before: '/eliza-antes.jpg',
-          after: '/eliza-depois.jpg',
-          name: '',
-          age: 0,
-          objective: '',
-          testimonial: '',
-          result: '',
-        },
+        { before: '/kamila-antes.jpg', after: '/kamila-depois.jpg' },
+        { before: '/luca-antes.jpg',   after: '/luca-depois.jpg' },
+        { before: '/thales-antes.jpg', after: '/thales-depois.jpg' },
+        { before: '/eliza-antes.jpg',  after: '/eliza-depois.jpg' },
       ].map((card, index) => (
-        <div key={index} className="min-w-[300px] md:min-w-0 flex-shrink-0">
-          <TransformationCard
-            name={card.name}
-            age={card.age}
-            objective={card.objective}
-            testimonial={card.testimonial}
-            result={card.result}
-            before={card.before}
-            after={card.after}
+        <div key={index} className="flex flex-col items-center space-y-4">
+          <img
+            src={card.before}
+            alt={`Antes - ${index}`}
+            className="rounded-xl w-full max-w-md shadow-md"
           />
+          <img
+            src={card.after}
+            alt={`Depois - ${index}`}
+            className="rounded-xl w-full max-w-md shadow-md"
+          />
+          {/* Opcional: legenda */}
+          <p className="text-gray-600 text-sm text-center">Resultado em 8 semanas</p>
         </div>
       ))}
     </div>
 
-    <div className="text-center mt-12">
+    <div className="text-center mt-16">
       <button className="bg-[#00D4AA] hover:bg-[#00B894] text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors duration-300 max-w-xs sm:max-w-sm w-full sm:w-auto">
         Quero Resultados Como Esses
       </button>
     </div>
   </div>
 </section>
+
 
 
 
