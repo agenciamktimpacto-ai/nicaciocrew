@@ -174,8 +174,7 @@ export default function YagoNicacioLanding() {
             alt={`Depois - ${index}`}
             className="rounded-xl w-full max-w-md shadow-md"
           />
-          {/* Opcional: legenda */}
-          <p className="text-gray-600 text-sm text-center">Resultado em 8 semanas</p>
+         
         </div>
       ))}
     </div>
