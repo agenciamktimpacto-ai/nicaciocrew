@@ -514,11 +514,11 @@ export default function YagoNicacioLanding() {
       </div>
       <Card className="bg-white">
         <CardContent className="p-8">
-          <form
-            className="space-y-6"
-            onSubmit={(e) => {
-              e.preventDefault();
-              const texto = `
+         <form
+  className="space-y-6"
+  onSubmit={(e) => {
+    e.preventDefault();
+    const texto = `
 📋 *Nova Avaliação Recebida*
 
 👤 *Nome:* ${e.target.nome.value}
@@ -526,53 +526,24 @@ export default function YagoNicacioLanding() {
 📧 *Email:* ${e.target.email.value}
 🛠 *Serviço de interesse:* ${e.target.servico.value}
 📝 *Mensagem:* ${e.target.mensagem.value}
-              `;
-              const url = `https://wa.me/5524998693677?text=${encodeURIComponent(texto)}`;
-              window.open(url, "_blank");
-            }}
-          >
-            <div className="grid md:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Nome</label>
-                <Input name="nome" placeholder="Seu nome completo" className="rounded-lg" required />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Telefone</label>
-                <Input name="telefone" placeholder="(99) 99999-9999" className="rounded-lg" required />
-              </div>
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">E-mail</label>
-              <Input name="email" type="email" placeholder="seu@email.com" className="rounded-lg" required />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Serviço de interesse</label>
-              <select
-                name="servico"
-                className="rounded-lg w-full px-4 py-3 border border-gray-300"
-                required
-              >
-                <option value="">Selecione o serviço</option>
-                <option value="Consultoria Presencial">Consultoria Presencial</option>
-                <option value="Consultoria Online">Consultoria Online</option>
-                <option value="Ambos">Quero saber mais sobre ambos</option>
-              </select>
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Mensagem</label>
-              <Textarea
-                name="mensagem"
-                placeholder="Conte-me sobre seus objetivos e principais dificuldades..."
-                className="rounded-lg min-h-[120px]"
-              />
-            </div>
-            <Button
-              type="submit"
-              className="w-full bg-[#00D4AA] hover:bg-[#00B894] text-white py-4 rounded-full text-lg font-semibold"
-            >
-              📲 Quero Fazer Minha Avaliação
-            </Button>
-          </form>
+    `;
+    const url = `https://wa.me/5524998693677?text=${encodeURIComponent(texto)}`;
+    window.open(url, "_blank");
+  }}
+>
+  <Input name="nome" placeholder="Seu nome completo" className="rounded-lg" required />
+  <Input name="telefone" placeholder="(99) 99999-9999" className="rounded-lg" required />
+  <Input name="email" type="email" placeholder="seu@email.com" className="rounded-lg" required />
+  <select name="servico" className="rounded-lg w-full px-4 py-3 border border-gray-300" required>
+    <option value="">Selecione o serviço</option>
+    <option value="Consultoria Presencial">Consultoria Presencial</option>
+    <option value="Consultoria Online">Consultoria Online</option>
+    <option value="Ambos">Quero saber mais sobre ambos</option>
+  </select>
+  <Textarea name="mensagem" className="rounded-lg min-h-[120px]" />
+  <Button type="submit" className="...">📲 Quero Fazer Minha Avaliação</Button>
+</form>
+
         </CardContent>
       </Card>
     </div>
