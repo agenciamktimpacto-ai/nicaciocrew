@@ -510,7 +510,7 @@ export default function YagoNicacioLanding() {
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">Telefone</label>
-                      <Input placeholder="(24) 99869-3677" className="rounded-lg" />
+                      <Input placeholder="(99) 99999-9999" className="rounded-lg" />
                     </div>
                   </div>
                   <div>
