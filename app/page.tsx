@@ -243,7 +243,7 @@ export default function YagoNicacioLanding() {
 
           <div className="flex justify-center mt-6">
             <a
-              href="https://wa.me/5524998693677"
+              href="https://wa.me/5524998773101"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#00D4AA] hover:bg-[#00B894] text-white py-3 px-6 rounded shadow transition-colors font-bold leading-7"
@@ -297,7 +297,7 @@ export default function YagoNicacioLanding() {
 
           <div className="flex justify-center mt-6">
             <a
-              href="https://wa.me/5524998693677"
+              href="https://wa.me/5524998773101"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#00D4AA] hover:bg-[#00B894] text-white py-3 px-6 rounded shadow transition-colors font-bold leading-7"
