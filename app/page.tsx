@@ -152,7 +152,7 @@ export default function YagoNicacioLanding() {
     <div className="text-center mb-16">
       <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Transformações Reais</h2>
       <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-        Confira resultados comprovados dos meus alunos entre 8 e 12 semanas de consultoria
+        Confira resultados comprovados dos meus alunos entre 8 ~ 12 semanas de consultoria
       </p>
     </div>
 
@@ -162,6 +162,8 @@ export default function YagoNicacioLanding() {
         { image: '/luca.png' },
         { image: '/thales.png' },
         { image: '/eliza.png' },
+        { image: '/bernardo.png' },
+        { image: '/maria.png' },
       ].map((card, index) => (
         <div key={index} className="flex justify-center">
           <img
@@ -174,10 +176,14 @@ export default function YagoNicacioLanding() {
     </div>
 
     <div className="text-center mt-16">
-      <button className="bg-[#00D4AA] hover:bg-[#00B894] text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors duration-300 max-w-xs sm:max-w-sm w-full sm:w-auto">
-        Quero Resultados Como Esses
-      </button>
-    </div>
+  <a
+    href="#servicos"
+    className="bg-[#00D4AA] hover:bg-[#00B894] text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors duration-300 max-w-xs sm:max-w-sm w-full sm:w-auto inline-block"
+  >
+    Quero Resultados Como Esses
+  </a>
+</div>
+
   </div>
 </section>
 
@@ -237,7 +243,7 @@ export default function YagoNicacioLanding() {
 
           <div className="flex justify-center mt-6">
             <a
-              href="https://wa.me/5524998773101"
+              href="https://wa.me/5524998773101?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20consulta%20presencial"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#00D4AA] hover:bg-[#00B894] text-white py-3 px-6 rounded shadow transition-colors font-bold leading-7"
@@ -291,7 +297,7 @@ export default function YagoNicacioLanding() {
 
           <div className="flex justify-center mt-6">
             <a
-              href="https://wa.me/5524998773101"
+              href="https://wa.me/5524998773101?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20consultoria%20online"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#00D4AA] hover:bg-[#00B894] text-white py-3 px-6 rounded shadow transition-colors font-bold leading-7"
@@ -457,13 +463,14 @@ export default function YagoNicacioLanding() {
     <p className="text-white text-center text-base md:text-lg mt-4 max-w-2xl mx-auto mb-8">
       Entre agora para minha consultoria e comece a treinar com técnica, clareza e resultado.
     </p>
-    <Button
-      size="lg"
-      className="bg-[#00D4AA] hover:bg-[#00B894] text-white px-8 py-4 rounded-full text-lg"
-      onClick={() => document.getElementById("contato")?.scrollIntoView({ behavior: "smooth" })}
-    >
-      Quero Começar Minha Transformação
-    </Button>
+<Button
+  size="lg"
+  className="bg-[#00D4AA] hover:bg-[#00B894] text-white px-8 py-4 rounded-full text-lg"
+  onClick={() => document.getElementById("servicos")?.scrollIntoView({ behavior: "smooth" })}
+>
+  Quero Começar Minha Transformação
+</Button>
+
   </div>
 </section>
 
