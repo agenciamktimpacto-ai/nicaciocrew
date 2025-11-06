@@ -152,29 +152,23 @@ export default function YagoNicacioLanding() {
     <div className="text-center mb-16">
       <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Transformações Reais</h2>
       <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-        Confira resultados comprovados dos meus alunos em apenas 8 semanas de consultoria
+        Confira resultados comprovados dos meus alunos entre 8 e 12 semanas de consultoria
       </p>
     </div>
 
     <div className="space-y-12">
       {[
-        { before: '/kamila-antes.jpg', after: '/kamila-depois.jpg' },
-        { before: '/luca-antes.jpg',   after: '/luca-depois.jpg' },
-        { before: '/thales-antes.jpg', after: '/thales-depois.jpg' },
-        { before: '/eliza-antes.jpg',  after: '/eliza-depois.jpg' },
+        { image: '/kamila.png' },
+        { image: '/luca.png' },
+        { image: '/thales.png' },
+        { image: '/eliza.png' },
       ].map((card, index) => (
-        <div key={index} className="flex flex-col items-center space-y-4">
+        <div key={index} className="flex justify-center">
           <img
-            src={card.before}
-            alt={`Antes - ${index}`}
+            src={card.image}
+            alt={`Transformação ${index + 1}`}
             className="rounded-xl w-full max-w-md shadow-md"
           />
-          <img
-            src={card.after}
-            alt={`Depois - ${index}`}
-            className="rounded-xl w-full max-w-md shadow-md"
-          />
-         
         </div>
       ))}
     </div>
